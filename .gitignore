@@ -1,0 +1,9 @@
+*.dSYM
+.build/
+bin/
+bin/
+/macos_build/
+/linux_build/
+cmake/
+/mbedtls-*/
+/tests
