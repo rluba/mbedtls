@@ -177,13 +177,13 @@ mbedtls_visitor :: (decl: *Declaration, parent_decl: *Declaration) -> Declaratio
 FOOTER_UNIX :: #string END
 
 #if OS == .MACOS {
-    libmbedcrypto :: #library,no_dll "macos/lib/libmbedcrypto";
-    libmbedx509   :: #library,no_dll "macos/lib/libmbedx509";
-    libmbedtls    :: #library,no_dll "macos/lib/libmbedtls";
+    libmbedcrypto :: #library "macos/lib/libmbedcrypto";
+    libmbedx509   :: #library "macos/lib/libmbedx509";
+    libmbedtls    :: #library "macos/lib/libmbedtls";
 } else #if OS == .LINUX {
-    libmbedcrypto :: #library,no_dll "linux/lib/libmbedcrypto";
-    libmbedx509   :: #library,no_dll "linux/lib/libmbedx509";
-    libmbedtls    :: #library,no_dll "linux/lib/libmbedtls";
+    libmbedcrypto :: #library "linux/lib/libmbedcrypto";
+    libmbedx509   :: #library "linux/lib/libmbedx509";
+    libmbedtls    :: #library "linux/lib/libmbedtls";
 }
 
 END
