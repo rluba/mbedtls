@@ -4,5 +4,10 @@ time_safe_equal :: (a: string, b: string) -> bool {
     return ((cast(int) (mbedtls_ct_memcmp(a.data, b.data, xx size) == 0)) & cast(int) (a.count == b.count)) > 0;
 }
 
-#load "unix.jai";
-#import "POSIX";
+#if OS == .WINDOWS {
+	#load "windows.jai";
+}
+else {
+	#load "unix.jai";
+	#import "POSIX";
+}

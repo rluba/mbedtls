@@ -4,6 +4,8 @@ bin/
 bin/
 /macos_build/
 /linux_build/
+/win_build/
+/mbedtls-3.5.1*
 cmake/
 /mbedtls-*/
 /tests
